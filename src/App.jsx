@@ -127,17 +127,17 @@ function App() {
       <div className="container">
     
         <h1 className='my-4 text-center'>Phones</h1>
-        <form className='d-flex flex-column w-50 mx-auto shadow-lg p-3 mb-5 bg-body-tertiary rounded' >
+        <form className='form d-flex flex-column w-50 mx-auto shadow-lg p-3 mb-5 bg-body-tertiary rounded' >
           <div className="mb-4">
-            <label for="name" className="form-label">Enter Name*</label>
+            <label for="name" className="form-label">Enter Name <span style={{color: 'red'}}>*</span></label>
             <input ref={nameRef} type="text" className="form-control" id="name" placeholder="Enter Name" />
           </div>
           <div className="mb-4">
-            <label for="price" className="form-label">Enter price*</label>
+            <label for="price" className="form-label">Enter price <span style={{color: 'red'}}>*</span></label>
             <input ref={priceRef} type="number" className="form-control" id="price" placeholder="Enter price" />
           </div>
           <div className="mb-4">
-            <label for="textarea" className="form-label">Enter description*</label>
+            <label for="textarea" className="form-label">Enter description <span style={{color: 'red'}}>*</span></label>
             <textarea ref={descRef} style={{ resize: "none" }} className="form-control" id="textarea" placeholder='Enter Description' rows="3"></textarea>
           </div>
           <select ref={statusRef} className="form-select form-control">

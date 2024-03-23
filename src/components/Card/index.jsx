@@ -1,6 +1,6 @@
 
 function Card (props) {
-    const {name, price, description, status, id} = props.phone;
+    const {name, price, description, status, id, index} = props.phone;
     const {deleteItem} =props;
 
     return (
