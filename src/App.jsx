@@ -96,21 +96,27 @@ function App() {
   }
 
 
-  function handleDelite (item) {
-    alert(item);
-    // let isDelete = confirm('Rostan ham ushbu malumotni ochirmohchimisiz?');
-    // if (isDelete && id) {
-    //   fetch(`https://auth-rg69.onrender.com/api/products/${id}`, {
-    //     method: "DELETE"
-    //   })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     console.log(data);
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //   })
-    // }
+  function handleDelite (id) {
+   
+    let isDelete = confirm('Rostan ham ushbu malumotni ochirmohchimisiz?');
+    if (isDelete && id) {
+      fetch(`https://auth-rg69.onrender.com/api/products/${id}`, {
+        method: "DELETE"
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.message == "Mahsulot muvaffaqiyatli o'chirildi") {
+          let copied = JSON.parse(JSON.stringify(phones));
+          copied = copied.filter(el => {
+            return el.id != id;
+          })
+          setPhones(copied)
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }
   }
 
 

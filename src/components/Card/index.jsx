@@ -1,6 +1,6 @@
 
 function Card (props) {
-    const {name, price, description, status} = props.phone;
+    const {name, price, description, status, id} = props.phone;
     const {deleteItem} =props;
 
     return (
@@ -11,7 +11,7 @@ function Card (props) {
                 <h5 className="card-title">${price}</h5>
                 <p className="card-text">{description}</p>
                 <h5 className={`card-title ${status == 'active' ? 'text-primary' : 'text-success'}`}>{status}</h5>
-                <button onClick={() => {deleteItem(item)}} className="btn btn-danger">Dalite</button>
+                <button onClick={() => {deleteItem(id)}} className="btn btn-danger">Dalite</button>
             </div>
             <div className="card-footer text-body-secondary">2 days ago</div>
         </div>
