@@ -137,7 +137,7 @@ function App() {
             <input ref={priceRef} type="number" className="form-control" id="price" placeholder="Enter price" />
           </div>
           <div className="mb-4">
-            <label for="textarea" className="form-label">Example textarea*</label>
+            <label for="textarea" className="form-label">Enter description*</label>
             <textarea ref={descRef} style={{ resize: "none" }} className="form-control" id="textarea" placeholder='Enter Description' rows="3"></textarea>
           </div>
           <select ref={statusRef} className="form-select form-control">
